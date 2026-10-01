@@ -1,0 +1,703 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Freedom by Design · Free Live Masterclass</title>
+<meta name="description" content="A free 90-minute live masterclass with James Clanfield. Find your anchor task and build the AI system that removes it. 30 seats. No replay.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="assets/ff.css">
+<style>
+/* Funnel 2 · live-event style from founderfreedom.coach/masterclass: navy night ground, paper sections, tight Inter headlines with
+   Instrument Serif italic accents, mono for event data. Centred, video-first layout: one message, one video, one button per screen.
+   The Boot Camp offer stack borrows the roman-numeral document layout from the Pillar offer architecture. */
+:root{
+  --navy:#1f2a3d; --navy-d:#16202f; --navy-2:#2c3a52; --navy-3:#3a4a66;
+  --paper:#f4ece1; --paper-2:#ece2d2; --paper-3:#e0d5c3;
+  --ink:#1a1612; --ink-3:#6b5d4f; --ink-4:#9a8b7e;
+  --accent:#d4622f; --accent-2:#c2532b; --accent-d:#9a3f1f; --accent-s:#e9b89c;
+  --leaf:#4a5d3a; --leaf-s:#6b8f4a; --live:#7bc96f;
+  --on-navy:#efe7da; --on-navy-2:#a9b3c4; --line-n:rgba(239,231,218,.12); --line-p:rgba(26,22,18,.12);
+  --serif:"Instrument Serif",Georgia,serif;
+  --sans:"Inter",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  --mono:"JetBrains Mono",ui-monospace,Consolas,monospace;
+  --ff-muted:var(--on-navy-2);
+  --vsl-bg:#0f1622; --vsl-ink:#efe7da; --vsl-accent:#e9b89c; --vsl-accent-strong:#d4622f; --vsl-radius:14px;
+  --vsl-display:var(--sans); --vsl-mono:var(--mono);
+  --vsl-shadow:0 30px 80px -30px rgba(0,0,0,.8),0 0 0 1px rgba(239,231,218,.08);
+  --vsl-art:radial-gradient(70% 90% at 80% 20%,rgba(212,98,47,.28),transparent 60%),radial-gradient(60% 80% at 10% 100%,rgba(107,143,74,.18),transparent 60%);
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--navy-d);color:var(--on-navy);font:400 16px/1.6 var(--sans);-webkit-font-smoothing:antialiased}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+.wrap{max-width:1180px;margin:0 auto;padding-inline:clamp(16px,4vw,40px)}
+h1,h2,h3{margin:0;font-family:var(--sans);font-weight:700;letter-spacing:-.035em;text-wrap:balance}
+h1{font-size:clamp(40px,6.4vw,80px);line-height:.98}
+h2{font-size:clamp(30px,4.2vw,52px);line-height:1.02}
+h3{font-size:clamp(20px,2vw,24px);line-height:1.15;letter-spacing:-.02em}
+h1 em,h2 em,h3 em{font-family:var(--serif);font-weight:400;font-style:italic;letter-spacing:-.01em;color:var(--accent-s)}
+.paper h1 em,.paper h2 em,.paper h3 em{color:var(--accent-2)}
+.k{font:600 11px/1.3 var(--mono);letter-spacing:.14em;text-transform:uppercase;color:var(--accent-s)}
+.paper .k{color:var(--accent-2)}
+.lead{font-size:clamp(17px,1.6vw,19.5px);color:var(--on-navy-2);max-width:56ch;margin:0}
+.paper .lead{color:var(--ink-3)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;background:var(--accent);color:#fff;border:0;border-radius:10px;padding:18px 26px;font:700 16px var(--sans);letter-spacing:-.01em;text-decoration:none;cursor:pointer;box-shadow:0 10px 30px -10px rgba(212,98,47,.7);transition:transform .2s,background .2s}
+.btn:hover{background:var(--accent-2);transform:translateY(-2px)}
+.btn.ghost{background:transparent;color:var(--on-navy);border:1px solid var(--line-n);box-shadow:none}
+.btn.ghost:hover{border-color:var(--on-navy)}
+.paper .btn.ghost{color:var(--ink);border-color:var(--line-p)}
+.btn.block{width:100%}
+.under{font-size:13px;color:var(--on-navy-2);margin-top:12px}
+.paper .under{color:var(--ink-3)}
+.paper{background:var(--paper);color:var(--ink)}
+.paper2{background:var(--paper-2);color:var(--ink)}
+.navy{background:var(--navy)}
+.blk{padding-block:clamp(64px,9vw,112px)}
+.live-dot{display:inline-flex;align-items:center;gap:8px}
+
+/* top strip + nav */
+.nav{display:flex;justify-content:space-between;align-items:center;gap:16px;padding-block:20px;flex-wrap:wrap}
+.logo{font-family:var(--serif);font-size:24px;text-decoration:none;letter-spacing:0}
+.logo em{color:var(--accent-s)}
+.paper .logo em{color:var(--accent-2)}
+.nav .meta{font:500 11px var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--on-navy-2)}
+
+/* hero */
+.hero{padding-block:clamp(32px,5vw,64px) clamp(56px,8vw,96px);display:grid;gap:clamp(28px,4vw,44px)}
+
+/* clean, centred hero */
+.center{display:grid;gap:20px;justify-items:center;text-align:center;max-width:900px;margin-inline:auto}
+.center .lead{margin-inline:auto}
+.vslwrap{width:100%;max-width:980px;margin-inline:auto}
+.ctarow{gap:12px}
+.ctarow .under{margin:0}
+.live-dot::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--live);display:inline-block;margin-right:8px;vertical-align:middle}
+.facts{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0;margin:8px 0 0;border-top:1px solid var(--line-n)}
+.facts div{padding:14px 14px 0 0;display:grid;gap:2px}
+.facts dt{font:600 10px var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--on-navy-2)}
+.facts dd{margin:0;font-weight:600;font-size:14.5px}
+.regcard{background:var(--paper);color:var(--ink);border-radius:16px;padding:clamp(22px,3vw,34px);display:grid;gap:14px;box-shadow:0 30px 80px -30px rgba(0,0,0,.7)}
+.regcard h3{font-size:clamp(24px,2.4vw,30px)}
+.room{display:grid;gap:16px;padding-block:20px 48px;max-width:1040px;margin-inline:auto}
+.offer{margin-top:0}
+
+/* problem */
+.problem{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(28px,5vw,72px);align-items:start}
+.loop{display:grid;gap:0;border-top:1px solid var(--line-p)}
+.loop div{display:grid;grid-template-columns:120px 1fr;gap:16px;padding:16px 0;border-bottom:1px solid var(--line-p);font-size:15.5px}
+.loop div span{font:600 11px var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--ink-4);padding-top:3px}
+.loop div:last-child span{color:var(--accent-2)}
+.loop div:last-child p{font-weight:600}
+.loop p{margin:0}
+
+/* agenda timeline */
+.agenda{display:grid;gap:0;position:relative}
+.agenda::before{content:"";position:absolute;left:94px;top:8px;bottom:8px;width:1px;background:var(--line-n)}
+.ag{display:grid;grid-template-columns:78px 32px minmax(0,1fr);gap:0 0;align-items:start;padding-block:18px}
+.ag .t{font:600 13px var(--mono);color:var(--accent-s);padding-top:4px;font-variant-numeric:tabular-nums}
+.ag .d{width:13px;height:13px;border-radius:50%;background:var(--navy-d);border:2px solid var(--accent-s);margin:6px 0 0 9px;position:relative;z-index:1}
+.ag.bonus .d{background:var(--accent);border-color:var(--accent)}
+.ag h3{margin-bottom:6px}
+.ag p{margin:0;color:var(--on-navy-2);max-width:58ch}
+.ag .tag{display:inline-block;margin-left:8px;font:600 10px var(--mono);letter-spacing:.12em;text-transform:uppercase;background:var(--accent);color:#fff;padding:3px 7px;border-radius:4px;vertical-align:middle}
+
+/* leave with */
+.leave{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
+.leave div{background:#fff;border:1px solid var(--line-p);border-radius:14px;padding:22px;display:grid;gap:10px;align-content:start}
+.leave .n{font:600 11px var(--mono);color:var(--accent-2);letter-spacing:.1em}
+.leave b{font-weight:700;font-size:17px;letter-spacing:-.01em}
+.leave span{font-size:14.5px;color:var(--ink-3)}
+
+/* who */
+.who{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.who div{border-radius:14px;padding:26px;display:grid;gap:12px;align-content:start}
+.who .y{background:var(--navy-2)}
+.who .n{border:1px dashed var(--line-n)}
+.who ul{list-style:none;margin:0;padding:0;display:grid;gap:10px}
+.who li{display:grid;grid-template-columns:22px 1fr;gap:8px;color:var(--on-navy-2)}
+.who .y li::before{content:"✓";color:var(--live);font-weight:700}
+.who .n li::before{content:"✕";color:var(--accent-s)}
+
+/* host */
+.host{display:grid;grid-template-columns:minmax(0,.7fr) minmax(0,1.3fr);gap:clamp(28px,5vw,64px);align-items:center}
+.photo{aspect-ratio:1;max-width:100%;border-radius:50%;background:radial-gradient(circle at 30% 30%,var(--paper-3),var(--paper-2));display:grid;place-items:center;position:relative;border:1px solid var(--line-p)}
+.photo span{font-family:var(--serif);font-size:clamp(80px,12vw,150px);color:rgba(26,22,18,.12)}
+.photo small{position:absolute;bottom:14%;font:600 10.5px var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--ink-3)}
+.creds{display:flex;flex-wrap:wrap;gap:8px}
+.creds span{border:1px solid var(--line-p);border-radius:999px;padding:6px 12px;font-size:13px;color:var(--ink-3)}
+
+/* quotes */
+.quotes{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.quotes figure{margin:0;background:var(--navy);border:1px solid var(--line-n);border-radius:14px;padding:26px;display:grid;gap:18px;align-content:space-between}
+.quotes blockquote{margin:0;font-family:var(--serif);font-size:clamp(22px,2.2vw,26px);line-height:1.2;color:#fff}
+.quotes figcaption{display:flex;align-items:center;gap:12px;font-size:13.5px;color:var(--on-navy-2)}
+.quotes figcaption i{width:38px;height:38px;border-radius:50%;background:var(--navy-3);display:grid;place-items:center;font:600 12px var(--mono);font-style:normal;color:var(--accent-s);flex:none}
+.quotes figcaption b{display:block;color:var(--on-navy);font-weight:600}
+
+/* faq */
+.faq details{border-bottom:1px solid var(--line-n);padding-block:18px}
+.faq summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;gap:16px;font-weight:600;font-size:17px}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";font-family:var(--mono);color:var(--accent-s)}
+.faq details[open] summary::after{content:"−"}
+.faq p{margin:10px 0 0;color:var(--on-navy-2);max-width:64ch}
+.twocol{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:clamp(28px,5vw,72px);align-items:start}
+
+/* form fields */
+.f{display:grid;gap:6px;font-size:13px;color:var(--ink-3);font-weight:500}
+.f input,.f select{font:inherit;font-size:16px;font-weight:400;color:var(--ink);background:#fff;border:1px solid var(--line-p);border-radius:10px;padding:13px 14px;color-scheme:light}
+.f input:focus,.f select:focus{outline:2px solid var(--accent);outline-offset:0;border-color:transparent}
+.g2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.fine{font-size:12px;color:var(--ink-4)}
+
+/* confirmed */
+.pass{display:grid;grid-template-columns:minmax(0,1fr);background:var(--paper);color:var(--ink);border-radius:16px;overflow:hidden}
+.pass .l{padding:24px;display:grid;gap:14px}
+.pass .l h3 em{color:var(--accent-2)}
+.pass dl{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin:0}
+.pass dt{font:600 10px var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--ink-4)}
+.pass dd{margin:2px 0 0;font-weight:600}
+.stepsrow{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+.stepsrow > div{background:var(--navy);border:1px solid var(--line-n);border-radius:14px;padding:22px;display:grid;gap:12px;align-content:start}
+.stepsrow .n{font:600 11px var(--mono);color:var(--accent-s);letter-spacing:.12em}
+.stepsrow p{margin:0;color:var(--on-navy-2);font-size:14.5px}
+.calbtns{display:flex;flex-wrap:wrap;gap:8px}
+.calbtns a{font:600 13px var(--sans);text-decoration:none;border:1px solid var(--line-n);border-radius:8px;padding:9px 12px}
+.calbtns a:hover{border-color:var(--on-navy)}
+.prep{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+.prep label{display:grid;grid-template-columns:22px 1fr;gap:10px;align-items:start;cursor:pointer;font-size:14.5px;color:var(--on-navy)}
+.prep input{accent-color:var(--live);width:18px;height:18px;margin:2px 0 0}
+.prep input:checked + span{color:var(--on-navy-2);text-decoration:line-through}
+.prog{height:6px;background:var(--navy-3);border-radius:3px;overflow:hidden}
+.prog i{display:block;height:100%;background:var(--live);transition:width .3s}
+
+/* live room */
+.roomtop{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;padding-block:16px;border-bottom:1px solid var(--line-n)}
+.pill{display:inline-flex;align-items:center;gap:8px;font:600 11px var(--mono);letter-spacing:.12em;text-transform:uppercase;border-radius:999px;padding:6px 12px}
+.pill.red{background:#b3261e;color:#fff}
+.pill.dim{border:1px solid var(--line-n);color:var(--on-navy-2)}
+.offer{display:grid;grid-template-columns:auto minmax(0,1fr) auto;gap:20px;align-items:center;background:var(--paper);color:var(--ink);border-radius:16px;padding:20px 24px;margin-top:16px;border-left:6px solid var(--accent)}
+.offer .price{font:600 40px/1 var(--mono);color:var(--accent-2)}
+.offer .price s{display:block;font-size:13px;color:var(--ink-4);font-weight:500}
+.offer p{margin:0;color:var(--ink-3);font-size:14.5px}
+.offer b{display:block;color:var(--ink);font-size:18px;letter-spacing:-.01em;margin-bottom:2px}
+
+/* boot camp */
+.days3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0;border:1px solid var(--line-p);border-radius:16px;overflow:hidden;background:#fff}
+.days3 > div{padding:clamp(22px,3vw,32px);display:grid;gap:12px;align-content:start;border-right:1px solid var(--line-p)}
+.days3 > div:last-child{border-right:0}
+.days3 .big{font-family:var(--serif);font-size:84px;line-height:.8;color:var(--accent-2)}
+.days3 .d{font:600 11px var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--ink-4)}
+.days3 p{margin:0;color:var(--ink-3);font-size:15px}
+.days3 .out{font-size:13.5px;border-top:1px solid var(--line-p);padding-top:12px;color:var(--ink)}
+.days3 .out b{font:600 10px var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--leaf);display:block;margin-bottom:4px}
+/* stack in the Pillar document style */
+.stackdoc{background:var(--paper);color:var(--ink);border:1px solid var(--paper-3);border-radius:6px;padding:clamp(22px,4vw,44px);display:grid;gap:18px}
+.stackdoc .hd{display:flex;justify-content:space-between;align-items:baseline;gap:10px;flex-wrap:wrap;border-bottom:1px solid var(--line-p);padding-bottom:16px}
+.stackdoc .hd h3{font-family:var(--serif);font-weight:400;font-size:clamp(28px,3vw,36px);letter-spacing:-.01em}
+.stackdoc .hd span{font-family:var(--serif);font-style:italic;color:var(--accent-2);font-size:19px}
+.si{display:grid;grid-template-columns:40px minmax(0,1fr) auto;gap:14px;padding:14px 0;border-bottom:1px solid var(--line-p);align-items:baseline}
+.si i{font-family:var(--serif);color:var(--accent-2);font-size:20px}
+.si b{font-weight:600;display:block}
+.si span{font-size:13.5px;color:var(--ink-3)}
+.si em{font-family:var(--serif);color:var(--accent-2);font-size:20px;white-space:nowrap;font-variant-numeric:tabular-nums}
+.stot{display:flex;justify-content:space-between;align-items:center;gap:16px;background:var(--ink);color:var(--paper);border-radius:4px;padding:18px 22px;flex-wrap:wrap}
+.stot small{font:600 10.5px var(--mono);letter-spacing:.14em;text-transform:uppercase;color:var(--accent-s)}
+.stot s{font-family:var(--serif);color:#8d8273;font-size:24px;margin-right:12px}
+.stot b{font-family:var(--serif);font-weight:400;font-size:48px;line-height:1}
+.why{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:14px}
+.why > div{border-radius:16px;padding:clamp(22px,3vw,32px);display:grid;gap:12px;align-content:start}
+.guar{border:2px dashed var(--accent-s)}
+.guar .pend{font:600 10px var(--mono);letter-spacing:.12em;text-transform:uppercase;background:var(--accent-s);color:var(--ink);padding:3px 7px;border-radius:4px;justify-self:start}
+
+/* checkout */
+.co{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:clamp(20px,3vw,40px);padding-block:clamp(32px,5vw,56px);align-items:start}
+.coform{background:var(--paper);color:var(--ink);border-radius:16px;padding:clamp(22px,3vw,32px);display:grid;gap:16px}
+.paybox{border:1px dashed var(--ink-4);border-radius:10px;padding:22px;display:grid;gap:6px;text-align:center;color:var(--ink-3);font-size:14px;background:#fff}
+.paybox b{font:600 11px var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--ink)}
+.bump{border:2px dashed var(--accent-2);background:#fff8f1;border-radius:12px;padding:16px;display:grid;grid-template-columns:22px 1fr;gap:12px;cursor:pointer}
+.bump input{accent-color:var(--accent-2);width:20px;height:20px;margin:2px 0 0}
+.bump b{display:block;color:var(--accent-d);font-weight:700}
+.bump span{font-size:13.5px;color:var(--ink-3)}
+.summary{background:var(--navy);border:1px solid var(--line-n);border-radius:16px;padding:24px;display:grid;gap:14px;position:sticky;top:20px}
+.summary .ln{display:flex;justify-content:space-between;gap:12px;font-size:14.5px;color:var(--on-navy-2)}
+.summary .ln b{color:var(--on-navy);font-weight:600;font-variant-numeric:tabular-nums}
+.summary .tot{border-top:1px solid var(--line-n);padding-top:14px;font-size:16px}
+.summary .tot b{font:600 28px var(--mono);color:#fff}
+.summary ul{margin:0;padding-left:18px;color:var(--on-navy-2);font-size:13.5px;display:grid;gap:4px}
+
+/* welcome */
+.onb{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
+.onb div{background:var(--navy);border:1px solid var(--line-n);border-radius:14px;padding:20px;display:grid;gap:8px;align-content:start}
+.onb .n{font:600 11px var(--mono);color:var(--live);letter-spacing:.1em}
+.onb p{margin:0;font-size:14px;color:var(--on-navy-2)}
+
+footer.ft{border-top:1px solid var(--line-n);padding-block:28px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;font:500 11px var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--on-navy-2)}
+
+/* ads */
+.ads{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;padding-block:clamp(32px,5vw,56px)}
+.ad{background:#fff;color:var(--ink);border-radius:12px;overflow:hidden;display:grid;grid-template-rows:auto auto 1fr auto;font-size:13.5px}
+.ad .ah{display:flex;gap:10px;align-items:center;padding:12px}
+.ad .av{width:34px;height:34px;border-radius:50%;background:var(--navy);color:var(--accent-s);display:grid;place-items:center;font-family:var(--serif);font-size:15px}
+.ad .ah b{display:block;font-size:13px}
+.ad .ah small{font-size:11px;color:var(--ink-4)}
+.ad .tx{padding:0 12px 12px;white-space:pre-line;color:#2a221b}
+.ad .cr{aspect-ratio:4/5;max-width:100%;background:var(--navy);color:var(--on-navy);padding:18px;display:grid;align-content:space-between;position:relative;overflow:hidden}
+.ad .cr.o{background:var(--accent);color:#fff}
+.ad .cr.p{background:var(--paper);color:var(--ink)}
+.ad .cr h4{margin:0;font:700 clamp(22px,2.2vw,28px)/1.02 var(--sans);letter-spacing:-.03em}
+.ad .cr h4 em{font-family:var(--serif);font-weight:400;font-style:italic;color:var(--accent-s)}
+.ad .cr.o h4 em{color:var(--navy-d)}
+.ad .cr.p h4 em{color:var(--accent-2)}
+.ad .cr small{font:600 9.5px var(--mono);letter-spacing:.12em;text-transform:uppercase;opacity:.75}
+.ad .af{display:flex;justify-content:space-between;align-items:center;gap:8px;padding:10px 12px;background:#f3f1ee}
+.ad .af span{font-size:11px;color:var(--ink-4)}
+.ad .af b{font-size:12px;background:#e4e1dc;padding:7px 10px;border-radius:4px;white-space:nowrap}
+
+@media (max-width:980px){
+  .problem,.host,.twocol,.co{grid-template-columns:minmax(0,1fr)}
+  .leave,.onb,.ads{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .summary{position:static}
+}
+@media (max-width:700px){
+  .quotes,.who,.leave,.days3,.why,.stepsrow,.onb,.g2,.ads,.facts{grid-template-columns:minmax(0,1fr)}
+  .days3 > div{border-right:0;border-bottom:1px solid var(--line-p)}
+  .pass{grid-template-columns:minmax(0,1fr)}
+  .pass dl{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .offer{grid-template-columns:minmax(0,1fr)}
+  .loop div{grid-template-columns:minmax(0,1fr);gap:2px}
+  .agenda::before{left:78px}
+  .ag{grid-template-columns:62px 32px minmax(0,1fr)}
+  .si{grid-template-columns:28px minmax(0,1fr)}
+  .si em{grid-column:2}
+}
+</style>
+</head>
+<body>
+
+<!-- ======================= 1 · ADS ======================= -->
+<section data-page="ads" hidden>
+  <div class="wrap">
+    <nav class="nav"><a class="logo" href="#register"><em>Founder</em> Freedom</a><span class="meta">Ad concepts · warm + retargeting</span></nav>
+    <div style="padding-top:clamp(24px,4vw,48px);display:grid;gap:14px">
+      <span class="k">Four hooks · one live room</span>
+      <h2>Sell the ninety minutes, <em>not the webinar.</em></h2>
+      <p class="lead">The scarcity is real (30 seats, no replay), so it can be said plainly. Hook 4 retargets everyone who took the Freedom Audit.</p>
+    </div>
+    <div class="ads">
+      <div class="ad"><div class="ah"><div class="av">FF</div><div><b>Founder Freedom</b><small>Sponsored</small></div></div><div class="tx">There's one task in your business that, if a system did it, would give you back hours every week.
+
+Find yours in the first 15 minutes. Then build the AI system that removes it. Live, with me.</div><div class="cr"><small>Hook 1 · Anchor task</small><h4>Find your <em>anchor task.</em> Build the system live.</h4><small>30 seats · no replay</small></div><div class="af"><span>founderfreedom.coach</span><b>Claim my seat</b></div></div>
+      <div class="ad"><div class="ah"><div class="av">FF</div><div><b>Founder Freedom</b><small>Sponsored</small></div></div><div class="tx">The business is always on. So you're always on.
+
+That's not ambition. It's a design flaw, and it's fixable.</div><div class="cr o"><small>Hook 2 · Always on</small><h4>The business is always on. <em>So are you.</em></h4><small>Free live masterclass</small></div><div class="af"><span>founderfreedom.coach</span><b>Reserve my seat</b></div></div>
+      <div class="ad"><div class="ah"><div class="av">FF</div><div><b>Founder Freedom</b><small>Sponsored</small></div></div><div class="tx">This isn't a webinar where you watch someone talk for an hour.
+
+You walk in with a problem. You walk out with a working AI system and a map of your next three tasks.</div><div class="cr p"><small>Hook 3 · Not a webinar</small><h4>Walk out with a <em>working system,</em> not notes.</h4><small>Freedom by Design</small></div><div class="af"><span>founderfreedom.coach</span><b>Save my seat</b></div></div>
+      <div class="ad"><div class="ah"><div class="av">FF</div><div><b>Founder Freedom</b><small>Sponsored</small></div></div><div class="tx">You took the Freedom Audit. Now build the fix.
+
+Next live masterclass is coming up. 30 seats.</div><div class="cr"><small>Hook 4 · Retargeting</small><h4>You found the gap. <em>Now build the fix.</em></h4><small>Audit takers only</small></div><div class="af"><span>founderfreedom.coach</span><b>Claim my seat</b></div></div>
+    </div>
+    <a class="btn" href="#register">Click an ad →</a>
+    <footer class="ft" style="margin-top:56px"><span>FounderFreedom™ · founderfreedom.coach</span><span>Ad concepts</span></footer>
+  </div>
+</section>
+
+<!-- ======================= 2 · REGISTER ======================= -->
+<section data-page="register" hidden>
+  <div class="wrap">
+    <nav class="nav"><a class="logo" href="#register"><em>Founder</em> Freedom</a><span class="meta">with James Clanfield</span></nav>
+    <div class="hero">
+      <div class="center">
+        <span class="k">Free live masterclass · <span data-ev="day"></span> · <span data-ev="times"></span></span>
+        <h1>Stop being the bottleneck <em>in your own business.</em></h1>
+        <p class="lead">In 90 minutes, live with James Clanfield, you'll find the one task that keeps you stuck, and build the AI system that takes it off your plate. Before the session ends.</p>
+      </div>
+      <div class="vslwrap"><div data-vsl="mc-register" data-eyebrow="Watch · 90 seconds" data-title="If your business stops when you stop, this is for you." data-length="1:30"></div></div>
+      <div class="center ctarow"><a class="btn" href="#reserve">Reserve my free seat →</a><span class="under">Free · 90 minutes · live only, no replay</span></div>
+    </div>
+  </div>
+
+  <div class="paper"><div class="wrap blk">
+    <div class="problem">
+      <div style="display:grid;gap:18px"><span class="k">Nothing moves without you</span><h2>The business is always on. <em>So you are always on.</em></h2><p class="lead">You don't need more hustle. You need to remove one task at a time, starting with the one that matters most.</p></div>
+      <div class="loop">
+        <div><span>Monday</span><p>Every lead waits for you to reply.</p></div>
+        <div><span>Wednesday</span><p>Every follow-up waits for you to remember.</p></div>
+        <div><span>Friday</span><p>Every decision waits for you to make it.</p></div>
+        <div><span>Weekend</span><p>So you never really switch off.</p></div>
+        <div><span>After the session</span><p>One of those runs without you. Then the next.</p></div>
+      </div>
+    </div>
+  </div></div>
+
+  <div class="wrap blk">
+    <div class="twocol">
+      <div style="display:grid;gap:16px;align-content:start;position:sticky;top:24px"><span class="k">The 90 minutes</span><h2>Built to be done, <em>not watched.</em></h2><p class="lead">You build alongside James, with your own business, in real time.</p><div><a class="btn ghost" href="#reserve">Reserve my seat</a></div></div>
+      <div class="agenda">
+        <div class="ag"><span class="t">0:00</span><span class="d"></span><div><h3>Why you're the bottleneck</h3><p>James's story, and the one shift that changed how his business runs.</p></div></div>
+        <div class="ag"><span class="t">0:10</span><span class="d"></span><div><h3>Find your anchor task</h3><p>A short exercise to find the one task that frees the most time once a system runs it.</p></div></div>
+        <div class="ag"><span class="t">0:25</span><span class="d"></span><div><h3>Watch the live build</h3><p>James builds an AI system with Claude, step by step, on a real anchor task.</p></div></div>
+        <div class="ag"><span class="t">0:45</span><span class="d"></span><div><h3>Build your own</h3><p>You build yours during the session. Questions answered live in the chat.</p></div></div>
+        <div class="ag"><span class="t">1:05</span><span class="d"></span><div><h3>Map your next three</h3><p>The next tasks to remove, in the right order, so the freedom compounds.</p></div></div>
+        <div class="ag bonus"><span class="t">1:25</span><span class="d"></span><div><h3>FIRST SYSTEM Builder™ <span class="tag">Live only</span></h3><p>A bonus tool for everyone still in the room at the end.</p></div></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="paper2"><div class="wrap blk" style="display:grid;gap:clamp(28px,4vw,44px)">
+    <div style="display:grid;gap:14px;max-width:760px"><span class="k" style="color:var(--accent-2)">You leave with</span><h2 style="color:var(--ink)">Four things you didn't have <em style="color:var(--accent-2)">when you logged on.</em></h2></div>
+    <div class="leave">
+      <div><span class="n">01</span><b>Your anchor task</b><span>Named, with the reason it's costing you the most time.</span></div>
+      <div><span class="n">02</span><b>A working AI system</b><span>Built by you, running on your business, before the session ends.</span></div>
+      <div><span class="n">03</span><b>Your next-three map</b><span>The next tasks to remove, in order.</span></div>
+      <div><span class="n">04</span><b>FIRST SYSTEM Builder™</b><span>The bonus tool, for live attendees only.</span></div>
+    </div>
+  </div></div>
+
+  <div class="wrap blk">
+    <div class="who">
+      <div class="y"><h3>For you if</h3><ul><li>You're a coach, consultant or solo service founder.</li><li>You are the operations team, the sales team and the delivery team.</li><li>You want to fix it with your own hands on the wheel.</li><li>You're not technical, and that's fine.</li></ul></div>
+      <div class="n"><h3>Not for you if</h3><ul><li>You want someone to do it all for you.</li><li>You're looking for a shortcut or a hack.</li><li>You can't give it 90 minutes without interruptions.</li></ul></div>
+    </div>
+  </div>
+
+  <div class="paper"><div class="wrap blk">
+    <div class="host">
+      <div class="photo"><span>JC</span><small>Photo · James Clanfield</small></div>
+      <div style="display:grid;gap:18px"><span class="k">Your host</span><h2>James Clanfield. <em>Former principal. Recovering bottleneck.</em></h2>
+        <p class="lead">Thirteen years in education, including time as a school principal. He left during COVID to build a location-independent business, spent two years travelling Europe with his family, and now runs it from Kuala Lumpur. He went from being the bottleneck to running the business remotely, and he built the PILLAR Method™ to get there.</p>
+        <div class="creds"><span>13+ years in education</span><span>Creator of the PILLAR Method™</span><span>Founder, Pillar Digital Marketing</span><span>Based in Kuala Lumpur</span></div></div>
+    </div>
+  </div></div>
+
+  <div class="wrap blk" style="display:grid;gap:clamp(28px,4vw,44px)">
+    <div class="quotes">
+      <figure><blockquote>"Completely transformed how I think about my business."</blockquote><figcaption><i>IK</i><span><b>Ishan Kulkarni</b>Founder &amp; CEO, CrowdCoursing</span></figcaption></figure>
+      <figure><blockquote>"Accessible, adaptive and solution focused."</blockquote><figcaption><i>KT</i><span><b>Kathryn Taylor</b>Director, Wellbeing Australia</span></figcaption></figure>
+      <figure><blockquote>"A powerful blend of educational leadership and marketing strategy."</blockquote><figcaption><i>KK</i><span><b>Kale Kneale</b>CEO, The Transformation Network</span></figcaption></figure>
+    </div>
+  </div>
+
+  <div class="navy"><div class="wrap blk" id="reserve">
+    <div class="twocol" style="align-items:center">
+      <div style="display:grid;gap:18px"><span class="k">Reserve your seat</span><h2>Thirty seats, <em>so James can see what you build.</em></h2><p class="lead">Free. No card. Bring a laptop, a free Claude account and 90 minutes.</p><dl class="facts"><div><dt>Date</dt><dd data-ev="day"></dd></div><div><dt>Time</dt><dd data-ev="times"></dd></div><div><dt>Format</dt><dd>Live on Zoom · 90 min</dd></div></dl></div>
+      <form class="regcard" id="regform">
+          <span class="k">Freedom by Design · free</span>
+          <h3>Reserve your seat</h3>
+          <div class="g2"><label class="f" for="r-n">First name<input id="r-n" autocomplete="given-name" required placeholder="Sarah"></label><label class="f" for="r-e">Email<input id="r-e" type="email" autocomplete="email" required placeholder="sarah@yourbusiness.com"></label></div>
+          <label class="f" for="r-m">Mobile, for a reminder 1 hour before<input id="r-m" type="tel" autocomplete="tel" placeholder="+61 4xx xxx xxx"></label>
+          <label class="f" for="r-b">Your biggest bottleneck right now<select id="r-b"><option>Lead follow-up</option><option>Content</option><option>Admin and scheduling</option><option>Client delivery</option><option>Sales calls</option><option>Something else</option></select></label>
+          <button class="btn block" type="submit">Reserve my free seat →</button>
+          <span class="fine">Live only, no replay. We'll email your join link.</span>
+      </form>
+    </div>
+  </div></div>
+
+  <div class="wrap blk faq" style="max-width:860px">
+    <h2 style="margin-bottom:20px">Questions</h2>
+    <details><summary>Is there a replay?</summary><p>No. It's built to be done live, with you building alongside. That's the point.</p></details>
+    <details><summary>Do I need to be technical?</summary><p>No. If you can write an email, you can follow along.</p></details>
+    <details><summary>What do I need?</summary><p>A laptop, a free Claude account and 90 minutes without interruptions.</p></details>
+    <details><summary>Will there be a pitch?</summary><p>At the end, James shares how to keep going if you want help. It's optional and it's short. The 90 minutes stand on their own.</p></details>
+    <details><summary>I can't make this date.</summary><p>The masterclass runs every month. Register anyway and we'll hold you a spot at the next one.</p></details>
+  </div>
+  <div class="wrap"><footer class="ft"><span>FounderFreedom™ · founderfreedom.coach</span><span>Privacy · Terms</span></footer></div>
+</section>
+
+<!-- ======================= 3 · CONFIRMED ======================= -->
+<section data-page="confirmed" hidden>
+  <div class="wrap">
+    <nav class="nav"><a class="logo" href="#register"><em>Founder</em> Freedom</a><span class="meta">Registration confirmed</span></nav>
+    <div class="hero" style="padding-top:clamp(16px,3vw,32px)">
+      <div style="display:grid;gap:18px;max-width:860px"><span class="k live-dot">You're registered</span><h1>You're registered, <span data-name>Sarah</span>. <em>One more step.</em></h1><p class="lead">Watch this three-minute video now. It shows you how to prepare so you walk out with a working system, not just notes.</p></div>
+      <div class="vslwrap" style="margin-inline:0"><div data-vsl="mc-thankyou" data-eyebrow="Watch before the masterclass · 3 min" data-title="The 2-minute prep that decides what you walk out with" data-length="3:00"></div></div>
+      <div class="pass">
+        <div class="l"><span class="k" style="color:var(--accent-2)">Your registration</span><h3>Freedom by Design · <em>live with James Clanfield</em></h3>
+          <dl><div><dt>Name</dt><dd data-name>Sarah</dd></div><div><dt>Date</dt><dd data-ev="day"></dd></div><div><dt>Time</dt><dd data-ev="times"></dd></div></dl></div>
+      </div>
+    </div>
+  </div>
+  <div class="wrap" style="padding-bottom:clamp(56px,8vw,96px);display:grid;gap:16px">
+    <div class="stepsrow">
+      <div><span class="n">STEP 1</span><h3>Add it to your calendar</h3><p>Block the 90 minutes now. Tell your family you're in a meeting.</p><div class="calbtns"><a data-gcal href="#" target="_blank" rel="noopener">Google Calendar</a><a data-ics href="#" download="freedom-by-design.ics">Apple / Outlook (.ics)</a></div></div>
+      <div><span class="n">STEP 2</span><h3>Do the 2-minute prep</h3><ul class="prep" id="prep">
+        <li><label for="p1"><input type="checkbox" id="p1"><span>Create a free Claude account at claude.ai</span></label></li>
+        <li><label for="p2"><input type="checkbox" id="p2"><span>List every task from last week that took over 15 minutes</span></label></li>
+        <li><label for="p3"><input type="checkbox" id="p3"><span>Circle the one you never want to do again</span></label></li></ul>
+        <div class="prog"><i id="prepbar" style="width:0"></i></div></div>
+      <div><span class="n">STEP 3 · OPTIONAL</span><h3>Know your weakest pillar</h3><p>Take the 10-minute Freedom Audit so you arrive knowing which pillar you're working on.</p><div><a class="btn ghost" href="https://founderfreedom.coach/audit" target="_blank" rel="noopener">Take the audit</a></div></div>
+    </div>
+    <p class="under">No replay. If you can't make it, reply to your confirmation email and we'll hold a spot for you at the next one.</p>
+  </div>
+  <div class="wrap"><footer class="ft"><span>FounderFreedom™ · founderfreedom.coach</span><span>Privacy · Terms</span></footer></div>
+</section>
+
+<!-- ======================= 4 · LIVE ROOM ======================= -->
+<section data-page="live" hidden>
+  <div class="wrap">
+    <div class="roomtop"><a class="logo" href="#register"><em>Founder</em> Freedom</a><div style="display:flex;gap:8px;flex-wrap:wrap"><span class="pill red live-dot">Live</span><span class="pill dim">Freedom by Design</span><span class="pill dim" data-ev="times"></span></div></div>
+    <div class="room">
+      <div data-vsl="mc-live" data-eyebrow="Live room · stream or Zoom webinar" data-title="Freedom by Design with James Clanfield" data-length="1:30:00"></div>
+      <div class="offer" id="offer">
+        <div class="price"><s>$2,526 value</s>$97</div>
+        <div><b>The 3-Day Founder Freedom Boot Camp</b><p>Build Position, Identity and Lead System live with James. Includes 3 months of Pillar Suite. Doors close 72 hours after the session.</p></div>
+        <a class="btn" href="#bootcamp">Join the Boot Camp →</a>
+      </div>
+    </div>
+  </div>
+  <div class="paper"><div class="wrap blk" style="padding-block:clamp(40px,6vw,64px)">
+    <div class="problem">
+      <div style="display:grid;gap:14px"><span class="k">The bridge · 1:05</span><h2>Tonight you removed one task. <em>Here's why that's only pillar four.</em></h2></div>
+      <p class="lead" style="font-size:clamp(19px,2vw,23px);color:var(--ink)">"If your positioning is unclear, automation just helps you send the wrong message faster. The Boot Camp is where we build the first three pillars properly, so everything you automate actually works."</p>
+    </div>
+  </div></div>
+  <div class="wrap"><footer class="ft"><span>FounderFreedom™ · founderfreedom.coach</span><span>Live room</span></footer></div>
+</section>
+
+<!-- ======================= 5 · BOOT CAMP SALES ======================= -->
+<section data-page="bootcamp" hidden>
+  <div class="wrap">
+    <nav class="nav"><a class="logo" href="#register"><em>Founder</em> Freedom</a><span class="meta">3-Day Boot Camp</span></nav>
+    <div class="hero" style="padding-top:clamp(16px,3vw,40px)">
+      <div class="center"><span class="k">The 3-Day Founder Freedom Boot Camp · for masterclass attendees</span><h1>Three days. Three pillars. <em>A foundation that actually holds.</em></h1><p class="lead">Build your Position, Identity and Lead System live with James, and walk out with a working business system, not a workbook.</p></div>
+      <div class="vslwrap"><div data-vsl="bc-sales" data-eyebrow="Watch first · 14 minutes" data-title="Why automation multiplies whatever's already there" data-length="14:02"></div></div>
+      <div class="center ctarow"><a class="btn" href="#checkout">Join the Boot Camp · $97</a><span class="under">3 live days · 90 to 120 minutes each · includes 3 months of Pillar Suite</span></div>
+    </div>
+  </div>
+
+  <div class="paper"><div class="wrap blk" style="display:grid;gap:clamp(28px,4vw,48px)">
+    <div class="problem"><div style="display:grid;gap:14px"><span class="k">Why one system isn't enough</span><h2>Automation sits on top of something. <em>Fix that first.</em></h2></div>
+      <p class="lead">In the masterclass you removed one task. That's real progress. But if your offer is unclear, your brand is inconsistent and your leads come from guesswork, every system you build sits on a shaky foundation. The Boot Camp fixes the foundation, in order.</p></div>
+    <div class="days3">
+      <div><span class="big">P</span><span class="d">Day 1 · Position</span><h3>Who you serve, and why you</h3><p>Get crystal clear on your client, their problem and your difference. Tested live until people get it in five seconds.</p><div class="out"><b>You leave with</b>A one-sentence offer you can actually sell.</div></div>
+      <div><span class="big">I</span><span class="d">Day 2 · Identity</span><h3>The obvious choice</h3><p>Your core message, content pillars and voice. One message, repeated, because clarity compounds and confusion costs.</p><div class="out"><b>You leave with</b>A brand people trust before the first call.</div></div>
+      <div><span class="big">L</span><span class="d">Day 3 · Lead System</span><h3>Leads on a calm week</h3><p>Landing page, lead capture and follow-up, built in Pillar Suite with Claude Skills doing the heavy lifting.</p><div class="out"><b>You leave with</b>A live lead source that runs without you.</div></div>
+    </div>
+  </div></div>
+
+  <div class="paper2"><div class="wrap blk">
+    <div class="twocol">
+      <div style="display:grid;gap:16px;align-content:start"><span class="k" style="color:var(--accent-2)">The offer stack</span><h2 style="color:var(--ink)">Everything you get <em style="color:var(--accent-2)">for $97.</em></h2><p class="lead" style="color:var(--ink-3)">Why so low? Because the hardest part isn't price. It's starting. Most founders who do the Boot Camp want to keep going. That's the bet James is making.</p></div>
+      <div class="stackdoc">
+        <div class="hd"><h3>The Boot Camp Stack</h3><span>$97 entry · $2,526 value</span></div>
+        <div class="si"><i>i</i><div><b>3 Days of Live Training</b><span>Position, Identity and Lead Source, built with James.</span></div><em>$897</em></div>
+        <div class="si"><i>ii</i><div><b>3 Months of Pillar Suite</b><span>CRM, automations, lead capture and calendar, connected.</span></div><em>$591</em></div>
+        <div class="si"><i>iii</i><div><b>Life-First Business™ eBook</b><span>The story, the philosophy and the full method.</span></div><em>$47</em></div>
+        <div class="si"><i>iv</i><div><b>PILLAR Method Templates</b><span>Positioning, identity, landing pages and capture forms.</span></div><em>$297</em></div>
+        <div class="si"><i>v</i><div><b>Claude Skills: Lead Source Build</b><span>Reusable skills for content, pages and capture.</span></div><em>$497</em></div>
+        <div class="si"><i>vi</i><div><b>Live Q&amp;A and Workbook</b><span>Every day ends with live questions.</span></div><em>$197</em></div>
+        <div class="stot"><small>Total stack value</small><div><s>$2,526</s><b>$97</b></div></div>
+        <a class="btn block" href="#checkout">Join the Boot Camp · $97</a>
+      </div>
+    </div>
+  </div></div>
+
+  <div class="wrap blk" style="display:grid;gap:clamp(28px,4vw,44px)">
+    <div class="why">
+      <div class="guar"><span class="pend">Guarantee</span><h3>Show up to Day 1. <em>That's the only risk.</em></h3><p style="margin:0;color:var(--on-navy-2)">If you don't think it's worth far more than $97, tell us before Day 2 and you'll get a full refund. No questions.</p></div>
+      <div style="background:var(--navy);border:1px solid var(--line-n)"><h3>After the Boot Camp</h3><p style="margin:0;color:var(--on-navy-2)">Keep Pillar Suite on a monthly plan, or move into Group Coaching, which builds all six pillars over four weeks and includes 12 months of the platform. You'll hear about it on Day 3. No pressure.</p></div>
+    </div>
+    <div class="quotes">
+      <figure><blockquote>"Completely transformed how I think about my business."</blockquote><figcaption><i>IK</i><span><b>Ishan Kulkarni</b>Founder &amp; CEO, CrowdCoursing</span></figcaption></figure>
+      <figure><blockquote>"Accessible, adaptive and solution focused."</blockquote><figcaption><i>KT</i><span><b>Kathryn Taylor</b>Director, Wellbeing Australia</span></figcaption></figure>
+      <figure><blockquote>"A powerful blend of educational leadership and marketing strategy."</blockquote><figcaption><i>KK</i><span><b>Kale Kneale</b>CEO, The Transformation Network</span></figcaption></figure>
+    </div>
+    <div class="faq" style="max-width:860px">
+      <details><summary>Do I need to be technical?</summary><p>No. Pillar Suite and the templates are set up for you to fill in, not build from scratch.</p></details>
+      <details><summary>What if I can't make every session live?</summary><p>Each day is built to be done live. If you miss a session, the recording and workbook are in Pillar Suite the same day.</p></details>
+      <details><summary>What happens after three months of Pillar Suite?</summary><p>Continue on a monthly plan, or move into Group Coaching, which includes 12 months.</p></details>
+    </div>
+    <div style="display:flex;flex-wrap:wrap;gap:16px;align-items:center"><a class="btn" href="#checkout">Join the Boot Camp · $97</a><span class="under" style="margin:0">Doors close <span data-ev="doors"></span>.</span></div>
+  </div>
+  <div class="wrap"><footer class="ft"><span>FounderFreedom™ · founderfreedom.coach</span><span>Privacy · Terms · Refunds</span></footer></div>
+</section>
+
+<!-- ======================= 6 · CHECKOUT ======================= -->
+<section data-page="checkout" hidden>
+  <div class="wrap">
+    <nav class="nav"><a class="logo" href="#bootcamp"><em>Founder</em> Freedom</a><span class="meta">Secure checkout</span></nav>
+    <div class="co">
+      <form class="coform" id="coform">
+        <span class="k" style="color:var(--accent-2)">Step 1 of 1 · your details</span>
+        <h2 style="font-size:clamp(28px,3.4vw,40px)">You're one step from <em>Day 1.</em></h2>
+        <div class="g2"><label class="f" for="c-n">Full name<input id="c-n" autocomplete="name" placeholder="Sarah Mitchell"></label><label class="f" for="c-e">Email<input id="c-e" type="email" autocomplete="email" placeholder="sarah@yourbusiness.com"></label></div>
+        <label class="f" for="c-p">Mobile<input id="c-p" type="tel" autocomplete="tel" placeholder="+61 4xx xxx xxx"></label>
+        <div class="paybox"><b>Secure payment</b>Card payment form (GoHighLevel / Stripe) sits here.</div>
+        <label class="bump" for="c-bump"><input type="checkbox" id="c-bump"><div><b>Yes, add the Claude Skills Library for $47</b><span>Every prompt and Claude Skill James uses in his own business, ready to copy. Only offered on this page.</span></div></label>
+        <button class="btn block" type="submit" id="c-go">Complete my order · $97</button>
+        <span class="fine">By joining you agree to the terms. Full refund before Day 2 if the guarantee is approved.</span>
+      </form>
+      <aside class="summary">
+        <span class="k">Order summary</span>
+        <div class="ln"><span>3-Day Founder Freedom Boot Camp</span><b>$97</b></div>
+        <div class="ln" id="c-bumpline" hidden><span>Claude Skills Library</span><b>$47</b></div>
+        <div class="ln tot"><span>Total today</span><b id="c-total">$97</b></div>
+        <ul><li>3 live days with James</li><li>3 months of Pillar Suite</li><li>Templates, eBook and Claude Skills</li><li>Live Q&amp;A and workbook</li></ul>
+        <div class="seatcap"><span>Starts</span><b data-ev="bcstart"></b></div>
+      </aside>
+    </div>
+  </div>
+  <div class="wrap"><footer class="ft"><span>FounderFreedom™ · founderfreedom.coach</span><span>Secure checkout</span></footer></div>
+</section>
+
+<!-- ======================= 7 · WELCOME + NEXT TIER ======================= -->
+<section data-page="welcome" hidden>
+  <div class="wrap">
+    <nav class="nav"><a class="logo" href="#register"><em>Founder</em> Freedom</a><span class="meta">Boot Camp · you're in</span></nav>
+    <div class="hero" style="padding-top:clamp(16px,3vw,32px)">
+      <div style="display:grid;gap:18px;max-width:860px"><span class="k live-dot">Order confirmed</span><h1>You're in. <em>Day 1 starts <span data-ev="bcday"></span>.</em></h1></div>
+      <div class="vslwrap" style="margin-inline:0"><div data-vsl="bc-welcome" data-eyebrow="Welcome from James · 60 seconds" data-title="Three things to do before Day 1" data-length="1:00"></div></div>
+      <div class="onb">
+        <div><span class="n">01</span><h3>Log in to Pillar Suite</h3><p>Your login is in your inbox. Set your password today.</p></div>
+        <div><span class="n">02</span><h3>Add all three days</h3><p>Calendar invites are attached to your welcome email.</p></div>
+        <div><span class="n">03</span><h3>Join the community</h3><p>Introduce yourself and your anchor task.</p></div>
+        <div><span class="n">04</span><h3>Bring your list</h3><p>Your anchor task list from the masterclass. We use it on Day 3.</p></div>
+      </div>
+    </div>
+  </div>
+  <div class="paper2"><div class="wrap blk">
+    <div class="twocol">
+      <div style="display:grid;gap:16px;align-content:start"><span class="k" style="color:var(--accent-2)">Day 3 · the next step</span><h2 style="color:var(--ink)">You built three pillars. <em style="color:var(--accent-2)">Group Coaching builds all six.</em></h2><p class="lead" style="color:var(--ink-3)">Four weeks. The full PILLAR Method built into your business: Leverage, Amplify and Results on top of the foundation you've just built.</p>
+        <div><a class="btn" href="https://founderfreedom.coach/clarity" target="_blank" rel="noopener">Book a call with James →</a><p class="under" style="color:var(--ink-3)">Not sure it's the right fit? That's what the call is for.</p></div></div>
+      <div class="stackdoc">
+        <div class="hd"><h3>The Group Coaching Stack</h3><span>$2,000 · $11,446 value</span></div>
+        <div class="si"><i>i</i><div><b>4 Weeks Live Group Coaching</b><span>Weekly sessions with James and a room of peers.</span></div><em>$3,997</em></div>
+        <div class="si"><i>ii</i><div><b>Full PILLAR Method Build</b><span>All six pillars built into your business.</span></div><em>$2,997</em></div>
+        <div class="si"><i>iii</i><div><b>12 Months Pillar Suite</b><span>The full platform for a year.</span></div><em>$2,364</em></div>
+        <div class="si"><i>iv</i><div><b>Premium Template Library</b><span>Funnels, sequences and content frameworks.</span></div><em>$497</em></div>
+        <div class="si"><i>v</i><div><b>Claude Skills Library Access</b><span>Every skill James has built.</span></div><em>$697</em></div>
+        <div class="si"><i>vi</i><div><b>Private Community Access</b><span>Founders building the same way.</span></div><em>$397</em></div>
+        <div class="si"><i>vii</i><div><b>Calendar and Automation Setup</b><span>Done with you inside Pillar Suite.</span></div><em>$497</em></div>
+        <div class="stot"><small>Total stack value</small><div><s>$11,446</s><b>$2,000</b></div></div>
+        <p class="fine" style="margin:0">Join within 7 days of the Boot Camp and your $97 is credited.</p>
+      </div>
+    </div>
+  </div></div>
+  <div class="wrap"><footer class="ft"><span>FounderFreedom™ · founderfreedom.coach</span><span>Privacy · Terms</span></footer></div>
+</section>
+
+<script>
+/* ---------------- EVENT SETTINGS (edit these) ---------------- */
+const EVENT = {
+  start: "2026-10-27T18:00:00+08:00",  // masterclass start (6pm Singapore time)
+  minutes: 90,
+  bootcampStart: "2026-11-03T18:00:00+08:00"
+};
+
+window.FF_FUNNEL = {
+  name: "Freedom by Design",
+  start: "register",
+  steps: [
+    { id:"ads", label:"Ads", notes:{ purpose:"Sell the outcome of 90 minutes: a working AI system, built live. Scarcity is real, so it's stated plainly.", metric:["Target","Cost per registration under $8"], build:["Retarget Freedom Audit takers with hook 4","Email the warm list two weeks out","Partners and podcasts use the same link with UTMs"] } },
+    { id:"register", label:"Register + VSL", notes:{ purpose:"A centred, video-first page: one headline, a 90-second video, one button. Everything below answers the questions a busy founder has before giving 90 minutes.", metric:["Target","Registration above 30%"], build:["Set the date in EVENT at the bottom of this file. The live page still shows 28 July","Replace the form with the GoHighLevel form (same fields)","Bottleneck dropdown tags the contact for the session"] },
+      script:{ name:"Registration VSL", dur:"90 sec", fmt:"James to camera, tight framing, captions burned in for silent autoplay.", parts:[
+        ["0:00","Hook",["If your business stops when you stop, this is for you."]],
+        ["0:10","Credibility",["I'm James Clanfield. I used to be a school principal. Today I run my business from Kuala Lumpur, and it doesn't need me for every lead, every follow-up, every decision.","That didn't happen by working harder. It happened by removing one task at a time."]],
+        ["0:35","The promise",["On [date], I'm running a free live masterclass called Freedom by Design.","In the first fifteen minutes you'll find your anchor task: the one thing that, if a system did it, would give you the most time back.","Then I'll build the AI system live, and you'll build yours alongside me. You leave with a working system and a map of the next three tasks to remove."]],
+        ["1:05","Close",["It's live only. No replay. Thirty seats, because I want to see what you're building.","If you're tired of being the bottleneck, click the button below and claim your seat."]]
+      ]} },
+    { id:"confirmed", label:"Thank-you + VSL", notes:{ purpose:"Registration isn't attendance. The video gives homework, and homework is commitment. The prep checklist and calendar buttons are the two biggest show-up levers.", metric:["Target","Show-up above 40%"], build:["Google Calendar and .ics links are generated from EVENT","Reminder emails at 5, 4, 3, 2 and 1 days, then 1 hour, then at start","Cross-sell the Freedom Audit so they arrive knowing their pillar"] },
+      script:{ name:"Show-up VSL", dur:"3 min", fmt:"James to camera. On-screen checklist appears during the prep section.", parts:[
+        ["0:00","You're in",["You're in. Thanks for grabbing a seat.","Before [date], I want to make sure you get the most out of this. The people who prepare walk out with a working system. The people who don't walk out with notes."]],
+        ["0:20","The mistake",["Here's what most founders get wrong about AI and automation. They try to automate everything at once.","They watch a few videos, sign up for five tools, build half of three things, and end up with more chaos than before. That's a new kind of busy.","What works is one task at a time, in the right order. That's what we'll do together."]],
+        ["1:20","Your prep",["[On screen: 1. Free Claude account  2. List last week's tasks  3. Circle one]","One. Create a free Claude account. That's what we'll build with.","Two. Write down every task you did last week that took more than fifteen minutes.","Three. Circle the one you'd most like to never do again. Bring that list."]],
+        ["2:20","Commitment",["There's no replay. I do that on purpose, because building it live is where the change happens.","Put it in your calendar now. Block the ninety minutes. Tell your family you're in a meeting. And bring your list. I'll see you on [date]."]]
+      ]} },
+    { id:"live", label:"Live room", notes:{ purpose:"The room people join. Hosting it on your own page (stream embed) instead of a bare Zoom link means the Boot Camp offer sits right under the video when James makes it.", metric:["Target","15% to 25% of attendees join the Boot Camp"], build:["Embed the stream in the mc-live video slot","Reveal the offer card at 1:15 (GHL: timed element)","Tag attended / no-show automatically"] },
+      script:{ name:"Live session run of show", dur:"90 min", fmt:"Live, facilitated by James. Attendees build alongside.", parts:[
+        ["0:00","Welcome",["James's story and the promise of the session."]],
+        ["0:10","Anchor task",["Exercise: find the one task that frees the most time once a system runs it."]],
+        ["0:25","Live build",["James builds an AI system with Claude for one attendee's anchor task."]],
+        ["0:45","Your build",["Attendees build their own. Q&A in chat."]],
+        ["1:05","The bridge",["Map the next three tasks.","Tonight you removed one task. That's Leverage, pillar four. But if your positioning is unclear, automation just helps you send the wrong message faster. The Boot Camp is where we build the first three pillars properly."]],
+        ["1:15","The invitation",["[Offer card appears under the video]","The 3-Day Boot Camp, $97. Walk through the three days and the stack."]],
+        ["1:25","Bonus + close",["Deliver the FIRST SYSTEM Builder™ to everyone still in the room."]]
+      ]} },
+    { id:"bootcamp", label:"Boot Camp + VSL", notes:{ purpose:"Used three ways: at the end of the live session, in the 72-hour follow-up emails, and as the catch-up for no-shows. Record the VSL once and reuse it every month.", metric:["Target","Checkout above 20% of page visitors"], build:["Doors close 72 hours after the masterclass ends","The stack uses the roman-numeral layout from the Pillar offer documents","Guarantee, recordings and the $97 credit need James's sign-off before launch"] },
+      script:{ name:"Boot Camp sales VSL", dur:"14 min", fmt:"James to camera with simple slides for the PILLAR graphic and the offer stack.", parts:[
+        ["0:00","Hook",["If you were at the masterclass, you built your first AI system. Maybe for the first time in a long time, something in your business ran without you.","Here's what I've learned. Automation doesn't fix a business. It amplifies whatever's already there. Strong foundation, it multiplies your freedom. Weak foundation, it multiplies the chaos.","In this video I'll show you how to build the foundation properly, in three days."]],
+        ["0:45","The story",["I spent thirteen years in education. I was a school principal. I was good at running a school. I was not ready for running my own business.","When I left during COVID, I worked on everything at once. Website, content, tools, offers, ads. Busy every hour, and I still couldn't say exactly who I helped.","We were travelling Europe as a family. Three kids. Beautiful places. And I spent a lot of it on my laptop. I'd built a job, not a business, and it followed me to every country we visited.","What changed it was order. Positioning first, then identity, then the lead system. Only then did I automate. Within [timeframe], the business stopped needing me for every decision. That order became the PILLAR Method."]],
+        ["3:00","The problem",["[Slide: P · I · L · L · A · R]","Most founders jump straight to pillar four, Leverage, because it feels like progress.","But if your positioning is vague, you're automating a vague message. If there's no lead system, there's nothing for the automation to work on.","It's not a discipline problem. It's an order problem. The first three pillars are the foundation."]],
+        ["5:30","The Boot Camp",["Day 1 is Position. We get you to a one-sentence offer and test it until people get it in five seconds.","Day 2 is Identity. One core message, repeated, because clarity compounds and confusion costs.","Day 3 is Lead System. Landing page, lead capture and follow-up, built inside Pillar Suite with Claude Skills doing the heavy lifting.","This isn't a course you watch later. It's three sessions where you build while I'm in the room."]],
+        ["8:30","The stack",["[Slide: stack builds line by line]","Three days of live training, $897 of value. Three months of Pillar Suite, $591. The Life-First Business eBook, $47. The PILLAR templates, $297. The Lead Source Claude Skills, $497. Live Q&A and workbook, $197.","All up, over $2,500 of value. You're getting it for $97."]],
+        ["11:00","Why $97",["The hardest part isn't the money. It's starting.","I'd rather you build the foundation with me for $97 than spend another year guessing. Most people who do the Boot Camp want to keep going. That's the bet I'm making.","[If guarantee approved] Show up to Day 1. If it isn't worth far more than $97, tell us before Day 2 for a full refund."]],
+        ["12:30","Who + urgency",["This is for coaches, consultants and solo founders who want to build it themselves with modern tools. It's not for anyone who wants it done for them.","Doors close [date, time], so we can set everyone up in Pillar Suite before Day 1."]],
+        ["14:00","Close",["You started this business for a life. Three days. Three pillars. A foundation that actually holds. Click below and I'll see you on Day 1."]]
+      ]} },
+    { id:"checkout", label:"Checkout", notes:{ purpose:"A one-step checkout on your own domain with a single, relevant order bump. The summary repeats what they get so there's no second-guessing at the payment step.", metric:["Target","Checkout completion above 65%, bump take rate 20% to 35%"], build:["Embed the GHL or Stripe payment element in the dashed box","Only offer the bump if the Claude Skills Library exists","Fire Purchase pixel on the welcome page"] } },
+    { id:"welcome", label:"Welcome + next tier", notes:{ purpose:"Onboard fast so buyers feel momentum, then set up the Day 3 invitation to Group Coaching, which builds the other three pillars. The call button goes to the Clarity Call booking page.", metric:["Target","10% to 20% of Boot Camp buyers join Group Coaching"], build:["Pillar Suite login emailed instantly","Day 3 close: book a call with James this week","Option: credit the $97 toward Group Coaching within 7 days"] },
+      script:{ name:"Welcome video", dur:"60 sec", fmt:"James to camera, warm and brief.", parts:[
+        ["0:00","Welcome",["Welcome to the Boot Camp. Really glad you're here."]],
+        ["0:08","Three things",["Check your email for your Pillar Suite login and set your password today.","Add all three sessions to your calendar.","Bring your anchor task list from the masterclass. We'll use it on Day 3."]],
+        ["0:50","Close",["See you on Day 1."]]
+      ]} }
+  ]
+};
+
+(function(){
+  const start = new Date(EVENT.start), end = new Date(start.getTime() + EVENT.minutes*60000);
+  const doors = new Date(end.getTime() + 72*3600000), bc = new Date(EVENT.bootcampStart);
+  const fmt = (d, o, tz) => d.toLocaleString("en-AU", { ...o, timeZone:tz });
+  const day = fmt(start, { weekday:"long", day:"numeric", month:"long" }, "Asia/Singapore");
+  const sgt = fmt(start, { hour:"numeric", minute:"2-digit" }, "Asia/Singapore").replace(":00","");
+  const syd = fmt(start, { hour:"numeric", minute:"2-digit" }, "Australia/Sydney").replace(":00","");
+  const sydZone = start.toLocaleString("en-AU",{timeZone:"Australia/Sydney",timeZoneName:"short"}).split(" ").pop();
+  const times = `${sgt} SGT · ${syd} ${sydZone}`;
+  const map = {
+    day, times,
+    short: fmt(start, { weekday:"short", day:"numeric", month:"short" }, "Asia/Singapore") + " · " + sgt + " SGT",
+    stub: `${fmt(start,{day:"2-digit",month:"short"},"Asia/Singapore").toUpperCase()}<br>${sgt.toUpperCase()} SGT`,
+    doors: fmt(doors, { weekday:"long", day:"numeric", month:"long", hour:"numeric", minute:"2-digit" }, "Asia/Singapore") + " SGT",
+    bcstart: fmt(bc, { weekday:"short", day:"numeric", month:"short" }, "Asia/Singapore"),
+    bcday: fmt(bc, { weekday:"long", day:"numeric", month:"long" }, "Asia/Singapore")
+  };
+  document.querySelectorAll("[data-ev]").forEach(el => { const v = map[el.dataset.ev]; if (v != null) el.innerHTML = v; });
+
+  const LS = { get(k){ try { return localStorage.getItem(k); } catch(e){ return null; } }, set(k,v){ try { localStorage.setItem(k,v); } catch(e){} } };
+  let me = null; try { me = JSON.parse(LS.get("ff-mc-reg")); } catch(e){}
+  const showName = () => document.querySelectorAll("[data-name]").forEach(el => el.textContent = me && me.name ? me.name : "Sarah");
+  showName();
+
+  /* calendar links */
+  const z = d => d.toISOString().replace(/[-:]/g,"").replace(/\.\d{3}/,"");
+  const title = "Freedom by Design · live masterclass with James Clanfield";
+  const details = "Bring: a laptop, a free Claude account, and your list of last week's tasks. Live only, no replay. Join link is in your confirmation email.";
+  document.querySelectorAll("[data-gcal]").forEach(a => a.href = `https://calendar.google.com/calendar/render?action=TEMPLATE&text=${encodeURIComponent(title)}&dates=${z(start)}/${z(end)}&details=${encodeURIComponent(details)}`);
+  const ics = ["BEGIN:VCALENDAR","VERSION:2.0","PRODID:-//Founder Freedom//Masterclass//EN","BEGIN:VEVENT",`UID:ffmc-${z(start)}@founderfreedom.coach`,`DTSTAMP:${z(new Date())}`,`DTSTART:${z(start)}`,`DTEND:${z(end)}`,`SUMMARY:${title}`,`DESCRIPTION:${details}`,"BEGIN:VALARM","TRIGGER:-PT1H","ACTION:DISPLAY","DESCRIPTION:Freedom by Design starts in 1 hour","END:VALARM","END:VEVENT","END:VCALENDAR"].join("\r\n");
+  try { const url = URL.createObjectURL(new Blob([ics], { type:"text/calendar" })); document.querySelectorAll("[data-ics]").forEach(a => a.href = url); } catch(e){}
+
+  /* registration */
+  document.getElementById("regform").addEventListener("submit", e => {
+    e.preventDefault();
+    me = { name: document.getElementById("r-n").value.trim() || "Sarah" };
+    LS.set("ff-mc-reg", JSON.stringify(me)); showName(); FF.go("confirmed");
+  });
+
+  /* prep checklist */
+  const prep = document.querySelectorAll("#prep input");
+  function prepBar(){ const n = [...prep].filter(i => i.checked).length; document.getElementById("prepbar").style.width = (n/prep.length*100) + "%"; LS.set("ff-mc-prep", JSON.stringify([...prep].map(i => i.checked))); }
+  try { (JSON.parse(LS.get("ff-mc-prep")) || []).forEach((v,i) => { if (prep[i]) prep[i].checked = v; }); } catch(e){}
+  prep.forEach(i => i.addEventListener("change", prepBar)); prepBar();
+
+  /* checkout */
+  const bump = document.getElementById("c-bump");
+  bump.addEventListener("change", () => {
+    const t = bump.checked ? 144 : 97;
+    document.getElementById("c-total").textContent = "$" + t;
+    document.getElementById("c-go").textContent = `Complete my order · $${t}`;
+    document.getElementById("c-bumpline").hidden = !bump.checked;
+  });
+  document.getElementById("coform").addEventListener("submit", e => { e.preventDefault(); FF.go("welcome"); });
+
+  document.addEventListener("ff:page", e => { if (e.detail === "confirmed") showName(); });
+})();
+</script>
+<script src="videos.js"></script>
+<script src="assets/ff.js"></script>
+</body>
+</html>
