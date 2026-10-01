@@ -14,7 +14,7 @@ A VSL-led live event funnel for Founder Freedom (James Clanfield). Warm traffic 
 | 6 | Checkout | One-step checkout with an optional add-on |
 | 7 | Welcome + next tier | Onboarding and the Group Coaching invitation |
 
-Use the bar at the bottom of the page to move between steps. **Notes & script** shows each page's purpose, target metric and the full VSL script. **Present** hides the preview tools.
+Each page links to the next through its own buttons and forms, just like the live funnel. To jump straight to a step, add its name to the URL, for example `#bootcamp`.
 
 ## View it
 
@@ -53,5 +53,5 @@ YouTube, Vimeo, Loom and Wistia links work, or put a file in `videos/` and use `
 ## Files
 
 - `index.html`: all funnel pages, copy, event settings and page logic
-- `assets/ff.js`, `assets/ff.css`: page router, video cards, preview bar and notes panel
+- `assets/ff.js`, `assets/ff.css`: page router and video cards
 - `videos.js`: video settings

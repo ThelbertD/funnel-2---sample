@@ -124,7 +124,6 @@
     const rem = e.target.closest("[data-vsl-remove]");
     if (add){
       const card = add.closest("[data-vsl]");
-      if (document.body.classList.contains("ff-clean") && add.classList.contains("vsl-ph")){ openDrawer(); return; }
       openPanel(card);
     }
     if (rem){
@@ -146,7 +145,7 @@
   const drawer = document.createElement("aside");
   drawer.className = "ffdrawer"; drawer.setAttribute("aria-label", "Page notes and video script");
   const scrim = document.createElement("div"); scrim.className = "ffscrim"; scrim.hidden = true;
-  document.body.append(bar, show, scrim, drawer);
+  // Preview bar, notes drawer and show-dot are built but not attached: the funnels ship without preview chrome.
 
   function setClean(on){
     document.body.classList.toggle("ff-clean", on);
@@ -213,6 +212,6 @@
   window.FF = { go: id => { if (location.hash.slice(1) === id) route(); else location.hash = id; }, LS, openDrawer };
 
   $$("[data-vsl]").forEach(renderCard);
-  setClean(LS.get("ff-clean") === "1");
+  LS.set("ff-clean", null);
   route();
 })();

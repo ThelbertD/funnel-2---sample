@@ -3,8 +3,6 @@
 [hidden]{display:none!important}
 html{scroll-behavior:smooth}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}
-body{padding-bottom:84px}
-body.ff-clean{padding-bottom:0}
 
 /* ---------- VSL card ---------- */
 .vsl{display:grid;gap:10px;width:100%;max-width:100%}
